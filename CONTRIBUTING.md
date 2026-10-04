@@ -1,150 +1,263 @@
-Contributing
+# 기여하기
 
-欢迎为跑跑卡丁车工具项目贡献代码、文档、Bug 修复与优化建议！本项目基于开源仓库发展而来，秉持开源协作、共同优化的原则，以下是详细贡献规范，请仔细阅读。
+跑跑卡丁车(카트라이더) 도구 프로젝트에 코드, 문서, 버그 수정 및 개선 사항을 기여해 주셔서 감사합니다!
 
-Acknowledgments / 致谢
+이 프로젝트는 여러 오픈소스 저장소를 기반으로 발전해 왔으며, **오픈소스 협업과 지속적인 개선**을 원칙으로 합니다. 아래의 기여 규정을 꼼꼼히 확인해 주세요.
 
-This project is based on and modified from the original work of the following open-source repositories:
+## 감사의 말씀 / Acknowledgments
 
-- [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075)
-Served as the original core codebase of this project. Most core logic and structure are derived and improved from this repository.
+이 프로젝트는 다음 오픈소스 저장소의 원본 코드를 기반으로 수정 및 발전시킨 프로젝트입니다.
 
-- [Kartrider-File-Reader](https://github.com/xpoi5010/Kartrider-File-Reader)
-Provided important references for Kartrider file parsing and data reading logic.
+* [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075)
+  이 프로젝트의 최초 핵심 코드 기반으로 사용되었습니다. 프로젝트의 대부분의 핵심 로직과 구조가 해당 저장소에서 파생되었으며, 이를 바탕으로 기능을 개선하고 확장했습니다.
 
-- [kart_data_Transform](https://github.com/lkk9898969/kart_data_Transform)
-Provided reference implementation for kart vehicle data parsing and transformation.
+* [Kartrider-File-Reader](https://github.com/xpoi5010/Kartrider-File-Reader)
+  카트라이더 파일의 파싱 및 데이터 읽기 로직을 구현하는 과정에서 중요한 참고 자료로 활용되었습니다.
 
-Sincere thanks to the authors of the above repositories for their excellent work and open-source spirit.
+* [kart_data_Transform](https://github.com/lkk9898969/kart_data_Transform)
+  카트 차량 데이터의 파싱 및 변환 로직에 대한 참고 구현으로 활용되었습니다.
 
-可贡献类型
+위 저장소의 개발자분들께 훌륭한 작업과 오픈소스 정신에 진심으로 감사드립니다.
 
-- 修复基于 [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075) 原始代码衍生的 Bug（如启动、文件解析异常）
+## 기여 가능한 분야
 
-- 新增跑跑卡丁车文件格式支持（Rho、Rho5、XML等）及车辆数据相关功能
+다음과 같은 형태의 기여를 환영합니다.
 
-- 优化车辆数据解析、转换逻辑（参考 [kart_data_Transform](https://github.com/lkk9898969/kart_data_Transform) 实现，提升准确性和效率）
+* [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075)의 원본 코드를 기반으로 발생하는 버그 수정
 
-- 完善项目文档、使用说明、注释，优化代码可读性
+  * 프로그램 실행 오류
+  * 파일 파싱 오류 등
 
-- 提交车辆数据相关的功能建议、使用问题反馈
+* 카트라이더 파일 형식 지원 추가
 
-- 优化项目性能、UI交互、兼容性（适配Windows常见版本）
+  * Rho
+  * Rho5
+  * XML 등
+  * 차량 데이터 관련 기능 추가
 
-行为准则
+* 차량 데이터 파싱 및 변환 로직 개선
 
-- 友善交流，尊重其他贡献者，不发布攻击性、无关或广告类内容
+  * [kart_data_Transform](https://github.com/lkk9898969/kart_data_Transform)의 구현 방식을 참고하여 정확성 및 처리 효율 향상
 
-- 不提交恶意代码、破解程序、侵权内容，遵守开源协议
+* 프로젝트 문서, 사용 설명서 및 주석 보완
 
-- 尊重各参考仓库的版权，不篡改原始代码的核心标识与致谢信息
+* 코드 가독성 개선
 
-- 提交的代码、文档需符合项目整体风格，不引入无关依赖
+* 차량 데이터 관련 기능 제안 및 사용 중 발생한 문제 제보
 
-提交 Issue 规范
+* 프로그램 성능, UI/UX 및 호환성 개선
 
-🐛 Bug 报告
+  * Windows 주요 버전 지원
 
-- 清晰描述 Bug 现象，提供完整复现步骤
+## 행동 강령
 
-- 注明系统版本（Windows 7/10/11）、项目版本/Commit 号
+* 서로 친절하게 소통하고 다른 기여자를 존중해 주세요.
+* 공격적이거나 프로젝트와 관련 없는 내용, 광고성 게시물을 작성하지 마세요.
+* 악성 코드, 크랙 프로그램 또는 저작권을 침해하는 콘텐츠를 제출하지 마세요.
+* 관련 오픈소스 라이선스를 준수해 주세요.
+* 참고 저장소의 저작권을 존중하고, 원본 코드의 핵심 표기 및 감사 정보를 임의로 삭제하거나 변경하지 마세요.
+* 제출하는 코드와 문서는 프로젝트의 전체적인 스타일을 따르며, 불필요한 의존성을 추가하지 않아야 합니다.
 
-- 附上报错截图、日志信息，若涉及文件解析异常，可提供脱敏后的文件样本
+## Issue 제출 규칙
 
-- 说明该 Bug 是否影响核心功能（如车辆数据解析、原始代码运行）
+### 🐛 버그 제보
 
-💡 功能建议
+버그를 제보할 때는 다음 내용을 최대한 명확하게 작성해 주세요.
 
-- 明确功能的使用场景（如车辆数据批量转换、新增某种文件解析）
+* 버그가 발생하는 현상을 구체적으로 설명
+* 버그를 재현할 수 있는 전체 과정 제공
+* 운영체제 버전 명시
 
-- 描述预期的输入、输出效果，可附上参考示例或截图
+  * Windows 7 / 10 / 11 등
+* 프로젝트 버전 또는 Commit 번호 명시
+* 오류 화면 스크린샷 및 로그 첨부
+* 파일 파싱 오류와 관련된 문제라면 개인정보나 민감한 정보를 제거한 파일 샘플 제공
+* 해당 버그가 핵심 기능에 미치는 영향 설명
 
-- 若涉及车辆数据相关功能，可参考 [kart_data_Transform](https://github.com/lkk9898969/kart_data_Transform) 的实现思路并提出优化建议
+  * 차량 데이터 파싱
+  * 프로그램 실행 등
 
-🔒 安全问题
+### 💡 기능 제안
 
-请勿公开提 Issue，直接联系项目维护者处理，避免安全风险。
+새로운 기능을 제안할 경우 다음 내용을 포함해 주세요.
 
-开发流程
+* 해당 기능이 필요한 구체적인 사용 사례
 
-1. Fork 本仓库到个人 GitHub 仓库
+  * 차량 데이터 일괄 변환
+  * 새로운 파일 형식 지원 등
+* 예상되는 입력 및 출력 결과 설명
+* 필요한 경우 참고 예시 또는 스크린샷 첨부
+* 차량 데이터 관련 기능이라면 [kart_data_Transform](https://github.com/lkk9898969/kart_data_Transform)의 구현 방식을 참고하여 개선 방향을 제안할 수 있습니다.
 
-2. 拉取主分支最新代码，确保与上游仓库同步：
-  - git checkout main
-  - git pull upstream main
+### 🔒 보안 문제
 
-3. 新建分支，分支命名规范（统一小写，用斜杠分隔）：
+보안과 관련된 문제는 공개 Issue로 등록하지 마세요.
 
-  - Bug 修复：fix/具体问题（如 fix/vehicle-data-parse-error）
+보안 문제가 발견된 경우 프로젝트 유지 관리자에게 직접 연락하여 제보해 주세요.
 
-  - 功能开发：feature/具体功能（如 feature/batch-vehicle-data-transform）
+## 개발 절차
 
-  - 文档修改：docs/具体内容（如 docs/update-vehicle-data-docs）
+### 1. 저장소 Fork
 
-4. 本地开发：基于 [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075) 原始代码修改时，保留核心逻辑；车辆数据相关开发可参考 [kart_data_Transform](https://github.com/lkk9898969/kart_data_Transform) 实现，确保代码可运行
+GitHub에서 본 저장소를 자신의 GitHub 계정으로 Fork합니다.
 
-5. 本地测试：完成开发后，验证功能正常，无新增 Bug，通过基础编译/运行检查
+### 2. 최신 main 브랜치 가져오기
 
-6. 提交 Commit：遵循规范填写提交信息（详见下方 Commit 规范）
+개발을 시작하기 전에 upstream 저장소의 최신 코드를 가져와 동기화합니다.
 
-7. Push 分支到个人仓库，发起 Pull Request（PR），关联相关 Issue（如有）
+```bash
+git checkout main
+git pull upstream main
+```
 
-8. 等待维护者审核，根据反馈修改代码，直至审核通过后合并
+### 3. 새 브랜치 생성
 
-Commit 信息规范（必须遵守）
+브랜치 이름은 **소문자와 `/`를 사용하여 통일**합니다.
 
-Commit 信息格式：type(scope): description（英文，简洁明了，不超过50字符）
+* 버그 수정:
+  `fix/구체적인-문제`
 
-类型说明（type 可选值）：
+  예:
+  `fix/vehicle-data-parse-error`
 
-feat: 新增功能（如 新增车辆数据批量转换功能）
-fix: 修复 Bug（如 修复车辆数据解析异常）
-docs: 更新文档（如 完善车辆数据使用说明）
-style: 格式化代码（不改变代码逻辑）
-refactor: 重构代码（如 重构车辆数据解析逻辑）
-test: 补充测试用例（如 新增车辆数据解析测试）
-chore: 依赖更新、构建调整等（不涉及核心功能）
+* 기능 개발:
+  `feature/구체적인-기능`
 
-示例：feat(vehicle-data): add batch transform function / fix(parse): fix rho file read error
+  예:
+  `feature/batch-vehicle-data-transform`
 
-代码规范
+* 문서 수정:
+  `docs/구체적인-내용`
 
-C# 代码（基于 [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075)）
+  예:
+  `docs/update-vehicle-data-docs`
 
-- 遵循 .NET 命名规范，类名、方法名、变量名清晰易懂，避免乱命名
+### 4. 로컬 개발
 
-- 编译无警告、无报错，确保代码可正常运行
+[Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075)의 원본 코드를 기반으로 수정하는 경우 기존 핵심 로직을 유지해 주세요.
 
-- 新增代码需添加必要注释，说明功能用途、参数含义
+차량 데이터와 관련된 기능을 개발할 경우 [kart_data_Transform](https://github.com/lkk9898969/kart_data_Transform)의 구현 방식을 참고할 수 있습니다.
 
-PR 提交要求
+추가하거나 수정한 코드는 정상적으로 빌드 및 실행될 수 있어야 합니다.
 
-- PR 标题清晰，格式与 Commit 一致，关联相关 Issue（如 Fix #123）
+### 5. 로컬 테스트
 
-- 单 PR 只做一件事，避免一次性提交大量无关修改，便于审核
+개발이 완료되면 다음 사항을 확인합니다.
 
-- 提交前确保本地测试通过，代码无报错、无冗余，通过基本 lint 检查
+* 기능이 정상적으로 동작하는지 확인
+* 새로운 버그가 발생하지 않았는지 확인
+* 기본적인 빌드 및 실행 테스트 통과
 
-- PR 描述中需说明：改动内容、改动原因、测试结果，若涉及车辆数据，需说明数据验证情况
+### 6. Commit
 
-- 不破坏已有功能，若需修改核心逻辑（如 Launcher.cn_3075 原始代码），需在 PR 中详细说明原因
+아래의 Commit 메시지 규칙에 따라 변경 사항을 Commit합니다.
 
-测试要求
+### 7. Push 및 Pull Request
 
-- 修改基于 [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075) 的核心代码后，需验证原始功能正常运行
+자신의 GitHub 저장소에 브랜치를 Push한 후 Pull Request(PR)를 생성합니다.
 
-- 修改车辆数据解析、转换逻辑后，需验证原有车辆数据可正常解析，新增功能符合预期
+관련 Issue가 있다면 PR에 함께 연결해 주세요.
 
-- 提供测试步骤或测试文件（可脱敏），便于维护者复现测试
+### 8. 코드 리뷰
 
-- 确保代码适配 Windows 7/10/11 常见版本，无兼容性问题
+유지 관리자의 리뷰를 기다리고, 피드백이 있을 경우 수정 사항을 반영합니다.
 
-联系方式
+최종 검토가 완료되면 PR이 Merge됩니다.
 
-若有疑问、建议或合作需求，可通过以下方式联系：
+## Commit 메시지 규칙
 
-- GitHub Issues / Discussions：直接在本仓库提交 Issue 或参与讨论
+Commit 메시지는 반드시 다음 형식을 따라야 합니다.
 
-- 维护者会在1-3个工作日内回复，感谢你的理解与配合
+```text
+type(scope): description
+```
 
-再次感谢所有贡献者的支持，携手优化跑跑卡丁车工具项目！🚗
+* 영어로 작성
+* 간결하고 명확하게 작성
+* **50자 이내** 권장
+
+### type 종류
+
+| Type       | 설명              | 예시                  |
+| ---------- | --------------- | ------------------- |
+| `feat`     | 새로운 기능 추가       | 차량 데이터 일괄 변환 기능 추가  |
+| `fix`      | 버그 수정           | 차량 데이터 파싱 오류 수정     |
+| `docs`     | 문서 수정           | 차량 데이터 사용 설명서 개선    |
+| `style`    | 코드 형식 수정        | 코드 포맷 정리 (로직 변경 없음) |
+| `refactor` | 코드 구조 개선        | 차량 데이터 파싱 로직 리팩터링   |
+| `test`     | 테스트 코드 추가/수정    | 차량 데이터 파싱 테스트 추가    |
+| `chore`    | 의존성, 빌드 설정 등 변경 | 의존성 업데이트            |
+
+### 예시
+
+```text
+feat(vehicle-data): add batch transform function
+```
+
+```text
+fix(parse): fix rho file read error
+```
+
+## 코드 작성 규칙
+
+### C# 코드
+
+C# 코드는 [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075)를 기반으로 작성되어 있으므로 다음 규칙을 따라 주세요.
+
+* .NET 명명 규칙을 준수합니다.
+* 클래스, 메서드 및 변수 이름은 명확하고 이해하기 쉽게 작성합니다.
+* 의미 없는 이름이나 지나치게 축약된 이름은 사용하지 않습니다.
+* 빌드 시 경고 및 오류가 발생하지 않도록 합니다.
+* 새롭게 추가하는 코드에는 필요한 주석을 작성합니다.
+* 주석에는 해당 기능의 목적과 매개변수의 의미 등을 설명합니다.
+
+## PR 제출 규칙
+
+* PR 제목은 명확하게 작성하며 Commit 메시지 형식을 따릅니다.
+* 관련 Issue가 있다면 연결합니다.
+
+  * 예: `Fix #123`
+* 하나의 PR에서는 **하나의 작업만 처리**하는 것을 원칙으로 합니다.
+* 서로 관련 없는 변경 사항을 하나의 PR에 함께 포함하지 마세요.
+* PR을 검토하기 쉽도록 변경 범위를 최대한 명확하게 유지해 주세요.
+* 제출 전에 로컬 테스트가 정상적으로 통과했는지 확인합니다.
+* 코드에 오류나 불필요한 코드가 없는지 확인합니다.
+* 기본적인 lint 검사를 통과해야 합니다.
+
+### PR 설명에 포함해야 할 내용
+
+PR 설명에는 최소한 다음 내용을 포함해 주세요.
+
+* 어떤 내용을 수정했는지
+* 왜 수정했는지
+* 어떤 테스트를 수행했는지
+* 차량 데이터와 관련된 변경 사항이라면 데이터 검증 결과
+
+기존 기능을 손상시키지 않아야 합니다.
+
+특히 [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075)의 핵심 로직을 변경해야 하는 경우, **변경이 필요한 이유를 PR에 자세히 설명해야 합니다.**
+
+## 테스트 규칙
+
+* [Launcher.cn_3075](https://github.com/MyPuppy/Launcher.cn_3075)의 핵심 코드를 수정한 경우 기존 기능이 정상적으로 동작하는지 반드시 확인해야 합니다.
+* 차량 데이터의 파싱 또는 변환 로직을 수정한 경우 기존 차량 데이터를 정상적으로 처리할 수 있는지 확인해야 합니다.
+* 새롭게 추가한 기능이 예상대로 동작하는지 검증해야 합니다.
+* 유지 관리자가 동일한 테스트를 수행할 수 있도록 테스트 방법 또는 테스트 파일을 제공해 주세요.
+* 테스트 파일에 개인정보나 민감한 정보가 포함되어 있다면 반드시 제거한 후 제공해야 합니다.
+* Windows 7 / 10 / 11 등 주요 Windows 환경에서 정상적으로 동작하는지 확인해 주세요.
+* 운영체제별 호환성 문제가 발생하지 않도록 주의해 주세요.
+
+## 문의 및 연락처
+
+질문, 제안 또는 협업 관련 문의가 있다면 다음 방법을 이용해 주세요.
+
+* **GitHub Issues / Discussions**
+
+  * 프로젝트 저장소에서 직접 Issue를 등록하거나 Discussions에 참여할 수 있습니다.
+
+유지 관리자는 일반적으로 **1~3영업일 이내에 답변**드릴 예정입니다.
+
+여러분의 이해와 협조에 감사드립니다.
+
+다시 한번 모든 기여자 여러분의 관심과 지원에 감사드립니다.
+함께 프로젝트를 발전시키고 더 나은 카트라이더 도구를 만들어 나가요! 🚗
